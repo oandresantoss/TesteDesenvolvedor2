@@ -10,7 +10,9 @@ function pertenceFibonacci(numero) {
     return b === numero;
 }
 
-
+const readline = require('readline').createInterface({
+    input: process.stdin,
+    output: process.stdout
 });
 
 function perguntar() {
@@ -21,7 +23,7 @@ function perguntar() {
             return;
         }
 
-        const numero = parseInt(input);
+        const numero = Number(input);
         if (isNaN(numero)) {
             console.log("Por favor, digite um número válido.");
         } else if (pertenceFibonacci(numero)) {
